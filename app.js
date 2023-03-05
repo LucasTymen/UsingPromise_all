@@ -10,3 +10,10 @@ const onReject = (rejectionReason) => {
 };
 
 // Write your code below:
+
+let checkSunglasses = checkAvailability('sunglasses', 'Favorite Supply Co.')
+let checkPants = checkAvailability('pants', 'Favorite Supply Co.')
+let checkBags  = checkAvailability('bags','Favorite Supply Co.')
+
+Promise.all([checkSunglasses, checkPants, checkBags])
+.then((onFulfill) => {console.log(onFulfill)})
